@@ -1,16 +1,20 @@
+require 'minitest/autorun'
+require 'minitest/pride'
+require './test/test_helper'
+require './lib/enigma'
 
+class EngimaTest < Minitest::Test
 
+  def test_it_exists
+    e = Enigma.new
+    assert_instance_of Enigma, e
+  end
 
+  def test_it_encrypts
+    e = Enigma.new
+  end
+end
 
-# pry(main)> require 'date'
-# => true
-#
-# pry(main)> require './lib/enigma'
-# => true
-#
-# pry(main)> e = Enigma.new
-# => #<Enigma:0x00007ff90f24cb78...>
-#
 # pry(main)> my_message = "this is so secret ..end.."
 # => "this is so secret ..end.."
 #
