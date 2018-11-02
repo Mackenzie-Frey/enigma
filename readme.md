@@ -1,7 +1,18 @@
-__**Functionality:**__
+# Self Assessment
 
-__**Object Oriented Programming**__
-
-__**Test Driven Development**__
-
-__**Version Control**__
+##__**Functionality:**__
+### *3: Meets Expectations*
+*
+*
+##__**Object Oriented Programming**__
+###
+*
+*
+##__**Test Driven Development**__
+###
+*
+*
+##__**Version Control**__
+###
+*
+*
