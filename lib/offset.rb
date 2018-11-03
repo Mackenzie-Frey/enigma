@@ -1,4 +1,4 @@
 require 'date'
 
-class DateOffset
+class Offset
 end
