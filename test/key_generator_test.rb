@@ -1,7 +1,7 @@
 require './test/test_helper'
-require './lib/key_offset'
+require './lib/offset'
 require './lib/key_generator'
 
-class KeyTest < Minitest::Test
+class KeyGeneratorTest < Minitest::Test
 
 end
