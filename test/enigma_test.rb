@@ -14,34 +14,23 @@ class EngimaTest < Minitest::Test
     assert_equal expected, enigma.alphabet
   end
 
-
-
-
-
-
-
-
-
-
-
-
   def test_it_can_encrypt
 skip
-    e = Enigma.new
+    enigma = Enigma.new
     my_message = 'this is so secret ..end..'
-    output_1 = e.encrypt(my_message, "12345", Date.today)
+    output_1 = enigma.encrypt(my_message, "12345", Date.today)
     assert_equal 'dkjsfhskdjhf', output_1
     # above string will be determined in future
-    output_2 = e.encrypt(my_message)
-    #key and date are optional (generate random key and use today's date)
-    assert_equal 'dskjhfsdkjhf', output_2
+    # output_2 = enigma.encrypt(my_message)
+    # key and date are optional (generate random key and use today's date)
+    # assert_equal 'dskjhfsdkjhf', output_2
   end
 
   def test_it_can_decrypt
 skip
-    e = Enigma.new
+    enigma = Enigma.new
     input = 'kfdsjhds'
-    assert_equal 'dsfkjhdskfj', input.decrypt
+    assert_equal 'dsfkjhdskfj', enigma.decrypt
   end
 end
 
