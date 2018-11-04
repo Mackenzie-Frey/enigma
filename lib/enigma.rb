@@ -7,9 +7,9 @@ require './lib/key_generator'
 
 class Enigma
 
-  # def initialize
-  #   @date = date
-  # end
+  def initialize
+    
+  end
 
   def encrypt(message, key = '12345', date = Date.today.strftime('%d%m%y'))
 

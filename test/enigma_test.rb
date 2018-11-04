@@ -4,16 +4,26 @@ require './lib/enigma'
 class EngimaTest < Minitest::Test
 
   def test_it_exists
-    e = Enigma.new
-    assert_instance_of Enigma, e
+    enigma = Enigma.new
+    assert_instance_of Enigma, enigma
   end
 
   def test_it_has_an_alphabet
-    e = Enigma.new
-    alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-    assert_instance_of Array, alphabet
+    enigma = Enigma.new
+    assert_instance_of Array, enigma.alphabet
     assert_equal 27, alphabet.count
   end
+
+
+
+
+
+
+
+
+
+
+
 
   def test_it_can_encrypt
 skip
@@ -28,10 +38,12 @@ skip
   end
 
   def test_it_can_decrypt
+skip
     e = Enigma.new
     input = 'kfdsjhds'
     assert_equal 'dsfkjhdskfj', input.decrypt
   end
 end
 
-date = date.parse(11-01-2018)
+# date = date.parse(11-01-2018)
+# .tr string method to translate
