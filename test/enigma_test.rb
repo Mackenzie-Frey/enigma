@@ -8,8 +8,11 @@ class EngimaTest < Minitest::Test
     assert_instance_of Enigma, e
   end
 
-  def test_it_can_
-
+  def test_it_has_an_alphabet
+    e = Enigma.new
+    alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    assert_instance_of Array, alphabet
+    assert_equal 27, alphabet.count
   end
 
   def test_it_can_encrypt
@@ -26,7 +29,8 @@ skip
 
   def test_it_can_decrypt
     e = Enigma.new
-    assert_equal 'dsfkjhdskfj', output
+    input = 'kfdsjhds'
+    assert_equal 'dsfkjhdskfj', input.decrypt
   end
 end
 

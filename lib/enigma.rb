@@ -15,6 +15,9 @@ class Enigma
 
   end
 
+  def decrypt
+  end
+
 
 end
 
