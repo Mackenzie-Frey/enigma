@@ -13,11 +13,11 @@ class Enigma
   end
 
   def encrypt(message, key = key_generator.create_key, date = Date.today.strftime('%d%m%y'))
-    to_encrypt = Hash.new
-    encryption = some_method_to_encrypt(message)
-    to_encrypt[:encryption] = encyrption
-    to_encrypt[:key] = key
-    to_encrypt[:date] = date
+    encryption_hash = Hash.new
+    encryption = some_method_to_encrypt_it(message)
+    encryption_hash[:encryption] = encyrption
+    encryption_hash[:key] = key
+    encryption_hash[:date] = date
     to_encrypt
   end
 
