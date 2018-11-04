@@ -1,18 +1,23 @@
 require 'date'
 require './lib/encrypt'
 require './lib/decrypt'
-require './lib/key_offset'
-require './lib/date_offset'
+require './lib/offset'
+require './lib/key_generator'
 
 
 class Enigma
+  attr_reader :alphabet
 
-  # def initialize
-  #   @date = date
-  # end
+  def initialize
+    @alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
+  end
 
-  def encrypt(message, key = '12345', date = Date.today.strftime('%d%m%y'))
+  def encrypt(message, key = key_generator.random, date = Date.today.strftime('%d%m%y'))
 
+# key and date are optional (generate random key and use today's date)
+  end
+
+  def decrypt
   end
 
 
