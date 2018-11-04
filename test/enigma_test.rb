@@ -23,7 +23,6 @@ skip
     actual = enigma.encrypt("hello world")
     expected = {encryption: "keder ohulw", key: "02715", date: "040895"}
     assert_equal expected, actual
-    # key and date are optional (generate random key and use today's date)
   end
 
   def test_it_can_decrypt
