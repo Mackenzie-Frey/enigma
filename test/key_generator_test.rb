@@ -12,7 +12,6 @@ class KeyGeneratorTest < Minitest::Test
     key = KeyGenerator.new
     new_key = key.create_key
     assert_equal 5, new_key.length
-    # is there a more thorough way to test this?
   end
 
   def test_it_generates_a_random_key

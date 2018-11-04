@@ -12,9 +12,9 @@ class Enigma
     @alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
   end
 
-  def encrypt(message, key = key_generator.random, date = Date.today.strftime('%d%m%y'))
+  def encrypt(message, key = key_generator.create_key, date = Date.today.strftime('%d%m%y'))
 
-# key and date are optional (generate random key and use today's date)
+# key? and date are optional (generate random key and use today's date)
   end
 
   def decrypt
