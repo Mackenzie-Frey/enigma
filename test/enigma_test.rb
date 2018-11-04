@@ -15,15 +15,15 @@ class EngimaTest < Minitest::Test
   end
 
   def test_it_can_encrypt
-skip
     enigma = Enigma.new
-    my_message = 'this is so secret ..end..'
-    output_1 = enigma.encrypt(my_message, "12345", Date.today)
-    assert_equal 'dkjsfhskdjhf', output_1
-    # above string will be determined in future
-    # output_2 = enigma.encrypt(my_message)
+    actual = enigma.encrypt("hello world", "02715", "040895")
+    expected = {encryption: "keder ohulw", key: "02715", date: "040895"}
+    assert_equal expected, actual
+skip
+    actual = enigma.encrypt("hello world")
+    expected = {encryption: "keder ohulw", key: "02715", date: "040895"}
+    assert_equal expected, actual
     # key and date are optional (generate random key and use today's date)
-    # assert_equal 'dskjhfsdkjhf', output_2
   end
 
   def test_it_can_decrypt
