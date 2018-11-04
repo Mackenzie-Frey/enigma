@@ -3,14 +3,11 @@ require 'date'
 class Offset
 end
 
-
 # require ‘./lib/key_generator.rb’
 # A key
 # B key
 # C key
 # D key
-#
-# 			require ‘date’
 # 			Account for: leading zeros
 # 			Supply Date.today if no date is given
 # Format -> DDMMYY
@@ -20,3 +17,4 @@ end
 # B offset: The second digit (0)
 # C offset: The third digit (2)
 # D offset: The fourth digit (5)
+

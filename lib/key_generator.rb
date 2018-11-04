@@ -1,5 +1,3 @@
-require './lib/key_generator'
-
 class KeyGenerator
 end
 
@@ -7,3 +5,5 @@ end
 # Key Generator
 # Account for: leading zeros
 # Random Number Generator
+
+
