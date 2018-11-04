@@ -1,8 +1,8 @@
 require 'date'
 require './lib/encrypt'
 require './lib/decrypt'
-require './lib/key_offset'
-require './lib/date_offset'
+require './lib/offset'
+require './lib/key_generator'
 
 
 class Enigma

@@ -8,7 +8,12 @@ class EngimaTest < Minitest::Test
     assert_instance_of Enigma, e
   end
 
+  def test_it_can_
+
+  end
+
   def test_it_can_encrypt
+skip
     e = Enigma.new
     my_message = 'this is so secret ..end..'
     output_1 = e.encrypt(my_message, "12345", Date.today)
@@ -17,6 +22,11 @@ class EngimaTest < Minitest::Test
     output_2 = e.encrypt(my_message)
     #key and date are optional (generate random key and use today's date)
     assert_equal 'dskjhfsdkjhf', output_2
+  end
+
+  def test_it_can_decrypt
+    e = Enigma.new
+    assert_equal 'dsfkjhdskfj', output
   end
 end
 
