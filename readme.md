@@ -1,18 +1,21 @@
 # Self Assessment
 
-##__**Functionality:**__##
-### *3: Meets Expectations*
+### __Functionality:__
+#### *3: Meets Expectations*
 *
 *
-##__**Object Oriented Programming**__##
-###
+
+### __Object Oriented Programming:__
+#### *3: Meets Expectations*
 *
 *
-##__**Test Driven Development**__##
-###
+
+### __Test Driven Development:__
+#### *3: Meets Expectations*
 *
 *
-##__**Version Control**__##
-###
+
+### __Version Control:__
+#### *3: Meets Expectations*
 *
-*
+* 
