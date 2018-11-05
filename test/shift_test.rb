@@ -24,30 +24,29 @@ class ShiftTest < Minitest::Test
   end
 
   def test_it_has_key_a
-    new_key = KeyGenerator.new
+    shift = Shift.new
+    assert_instance_of Integer, shift.a_key
 
-    assert_instance_of Integer, new_key.a_key
-
-    actual = new_key.a_key.to_s.length
+    actual = shift.a_key.to_s.length
     assert_equal 2, actual
 
-    expected = (new_key.key[0] + new_key.key[1]).to_i
-    actual = new_key.a_key
+    expected = (shift.key[0] + shift.key[1]).to_i
+    actual = shift.a_key
     assert_equal expected, actual
   end
 
   def test_it_has_keys_a_b_and_c
-    new_key = KeyGenerator.new
-    expected = (new_key.key[1] + new_key.key[2]).to_i
-    actual = new_key.b_key
+    shift = Shift.new
+    expected = (shift.key[1] + shift.key[2]).to_i
+    actual = shift.b_key
     assert_equal expected, actual
 
-    expected = (new_key.key[2] + new_key.key[3]).to_i
-    actual = new_key.c_key
+    expected = (shift.key[2] + shift.key[3]).to_i
+    actual = shift.c_key
     assert_equal expected, actual
 
-    expected = (new_key.key[3] + new_key.key[4]).to_i
-    actual = new_key.d_key
+    expected = (shift.key[3] + shift.key[4]).to_i
+    actual = shift.d_key
     assert_equal expected, actual
   end
 
@@ -68,8 +67,4 @@ class ShiftTest < Minitest::Test
     actual = shift.shift_amounts.first
     assert_instance_of Integer, actual
   end
-
-
-
-
 end
