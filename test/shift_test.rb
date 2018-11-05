@@ -9,7 +9,7 @@ class ShiftTest < Minitest::Test
   end
 
   def test_it_has_a_key
-    shift = Shift.new
+    shift  = Shift.new
     actual = shift.key.length
     assert_equal 5, actual
     assert_instance_of String, shift.key
@@ -28,63 +28,63 @@ class ShiftTest < Minitest::Test
     assert_instance_of Integer, shift.a_key
 
     expected = (shift.key[0] + shift.key[1]).to_i
-    actual = shift.a_key
+    actual   = shift.a_key
     assert_equal expected, actual
   end
 
   def test_it_has_keys_a_b_and_c
-    shift = Shift.new
+    shift    = Shift.new
     expected = (shift.key[1] + shift.key[2]).to_i
-    actual = shift.b_key
+    actual   = shift.b_key
     assert_equal expected, actual
 
     expected = (shift.key[2] + shift.key[3]).to_i
-    actual = shift.c_key
+    actual   = shift.c_key
     assert_equal expected, actual
 
     expected = (shift.key[3] + shift.key[4]).to_i
-    actual = shift.d_key
+    actual   = shift.d_key
     assert_equal expected, actual
   end
 
   def test_it_reformats_date_to_DDMMYY_if_date_given
-    offset   = Offset.new("041818")
-    actual   = offset.date
+    shift    = Shift.new
+    actual   = shift.date
     expected = "041818"
     assert_equal expected, actual
   end
 
   def test_it_reformats_date_to_DDMMYY_if_no_date_given
-    offset   = Offset.new
-    actual   = offset.date
+    shift    = Shift.new
+    actual   = shift.date
     expected = "051118"
     assert_equal expected, actual
   end
 
   def test_it_can_square_the_date
-    offset   = Offset.new
-    actual   = offset.date_squared
+    shift    = Shift.new
+    actual   = shift.date_squared
     expected = 2613049924
     assert_equal expected, actual
   end
 
   def test_it_takes_last_four_digits_of_square
-    offset   = Offset.new
-    actual   = offset.last_four_digits
+    shift    = Shift.new
+    actual   = shift.last_four_digits
     expected = "9924"
     assert_equal expected, actual
   end
 
   def test_it_has_offset_a
-    offset   = Offset.new
-    assert_equal 9, offset.offset_a
+    shift    = Shift.new
+    assert_equal 9, shift.offset_a
   end
 
   def test_it_has_offsets_b_c_d
-    offset   = Offset.new
-    assert_equal 9, offset.offset_b
-    assert_equal 2, offset.offset_c
-    assert_equal 4, offset.offset_d
+    shift    = Shift.new
+    assert_equal 9, shift.offset_b
+    assert_equal 2, shift.offset_c
+    assert_equal 4, shift.offset_d
   end
 
   def test_it_knows_shifts
