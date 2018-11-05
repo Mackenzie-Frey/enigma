@@ -12,10 +12,17 @@ class Offset
     @date.to_i ** 2
   end
 
+  def date_squared_to_s
+    date_squared.to_s
+  end
+
+  def last_four_digits
+    total_string = date_squared_to_s[-4] + date_squared_to_s[-3] + date_squared_to_s[-2] + date_squared_to_s[-1]
+    total_string
+  end
+
 end
 
-# Square the numeric form (1672401025)
-# Take the last four digits (1025)
 # A offset: The first digit (1)
 # B offset: The second digit (0)
 # C offset: The third digit (2)
