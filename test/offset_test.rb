@@ -10,10 +10,10 @@ class OffsetTest < Minitest::Test
 
   def test_it_reformats_date_to_DDMMYY
     offset = Offset.new
-    date = Date.new
-    actual = date.reformat_date
+    actual = offset.date.reformat_date
     expected =
     assert_equal expected, actual
   end
 
+# date = Date.today.strftime('%d%m%y')
 end
