@@ -8,6 +8,12 @@ class ShiftTest < Minitest::Test
     assert_instance_of Shift, shift
   end
 
+  def test_a_key_can_be_provided
+    shift = Shift.new("09032")
+    actual = shift.key
+    assert_equal "09032", actual
+  end
+
   def test_it_has_a_key
     shift  = Shift.new
     actual = shift.key.length
@@ -23,7 +29,7 @@ class ShiftTest < Minitest::Test
     assert shift_2.key != shift_3.key
   end
 
-  def test_it_has_key_a
+  def test_it_has_the_key_a
     shift = Shift.new
     assert_instance_of Integer, shift.a_key
 
@@ -32,7 +38,7 @@ class ShiftTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_it_has_keys_a_b_and_c
+  def test_it_has_the_keys_a_b_and_c
     shift    = Shift.new
     expected = (shift.key[1] + shift.key[2]).to_i
     actual   = shift.b_key
