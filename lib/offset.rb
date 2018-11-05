@@ -8,13 +8,11 @@ class Offset
     @date = date
   end
 
-end
+  def date_squared
+    @date.to_i ** 2
+  end
 
-# require ‘./lib/key_generator.rb’
-# A key
-# B key
-# C key
-# D key
+end
 
 # Square the numeric form (1672401025)
 # Take the last four digits (1025)
