@@ -8,5 +8,11 @@ class ShiftTest < Minitest::Test
     assert_instance_of Shift, shift
   end
 
+  def test_it_has_shift_array
+    shift  = Shift.new
+    actual = shift.shiftamount
+    assert_equal [], actual
+  end
+
 
 end
