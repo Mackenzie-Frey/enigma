@@ -36,4 +36,16 @@ class OffsetTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_it_has_offset_a
+    offset   = Offset.new
+    assert_equal 9, offset.offset_a
+  end
+
+  def test_it_has_offsets_b_c_d
+    offset   = Offset.new
+    assert_equal 9, offset.offset_b
+    assert_equal 2, offset.offset_c
+    assert_equal 4, offset.offset_d
+  end
+
 end
