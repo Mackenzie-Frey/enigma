@@ -27,9 +27,6 @@ class ShiftTest < Minitest::Test
     shift = Shift.new
     assert_instance_of Integer, shift.a_key
 
-    actual = shift.a_key.to_s.length
-    assert_equal 2, actual
-
     expected = (shift.key[0] + shift.key[1]).to_i
     actual = shift.a_key
     assert_equal expected, actual
@@ -48,12 +45,6 @@ class ShiftTest < Minitest::Test
     expected = (shift.key[3] + shift.key[4]).to_i
     actual = shift.d_key
     assert_equal expected, actual
-  end
-
-  def test_it_has_empty_shift_array
-    shift  = Shift.new
-    actual = shift.shift_amounts
-    assert_equal [], actual
   end
 
   def test_it_knows_shifts
