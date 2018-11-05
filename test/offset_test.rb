@@ -32,7 +32,7 @@ class OffsetTest < Minitest::Test
   def test_it_takes_last_four_digits_of_square
     offset   = Offset.new
     actual   = offset.last_four_digits
-    expected = 9924
+    expected = "9924"
     assert_equal expected, actual
   end
 
