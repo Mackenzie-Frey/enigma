@@ -11,7 +11,7 @@ class OffsetTest < Minitest::Test
   def test_it_reformats_date_to_DDMMYY
     offset = Offset.new
     actual = offset.date.reformat_date
-    expected = 051118
+    expected = "051118"
     assert_equal expected, actual
   end
 
