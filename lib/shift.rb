@@ -57,19 +57,20 @@ class Shift
   end
 
   def shift_a
-    a_key
+    a_key + offset_a
   end
 
   def shift_b
-    b_key
+    b_key + offset_b
   end
 
   def shift_c
-    c_key
+    c_key + offset_c
   end
 
   def shift_d
-    d_key
+    binding.pry
+    d_key + offset_d
   end
 
   def shift_amounts
