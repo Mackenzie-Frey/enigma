@@ -23,7 +23,7 @@ class KeyGeneratorTest < Minitest::Test
     assert key_2.key != key_3.key
   end
 
-  def test_it_has_key_A
+  def test_it_has_key_a
     new_key = KeyGenerator.new
 
     assert_instance_of Integer, new_key.a_key
@@ -36,6 +36,20 @@ class KeyGeneratorTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_it_has_keys_a_b_and_c
+    new_key = KeyGenerator.new
+    expected = (new_key.key[1] + new_key.key[2]).to_i
+    actual = new_key.b_key
+    assert_equal expected, actual
+
+    expected = (new_key.key[2] + new_key.key[3]).to_i
+    actual = new_key.c_key
+    assert_equal expected, actual
+
+    expected = (new_key.key[3] + new_key.key[4]).to_i
+    actual = new_key.d_key
+    assert_equal expected, actual
+  end
 
 
 end
