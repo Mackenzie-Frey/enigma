@@ -8,6 +8,12 @@ class ShiftTest < Minitest::Test
     assert_instance_of Shift, shift
   end
 
+  def test_a_key_can_be_provided
+    shift  = Shift.new("09032")
+    actual = shift.key
+    assert_equal "09032", actual
+  end
+
   def test_it_has_a_key
     shift  = Shift.new
     actual = shift.key.length
@@ -23,7 +29,7 @@ class ShiftTest < Minitest::Test
     assert shift_2.key != shift_3.key
   end
 
-  def test_it_has_key_a
+  def test_it_has_the_key_a
     shift = Shift.new
     assert_instance_of Integer, shift.a_key
 
@@ -32,7 +38,7 @@ class ShiftTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_it_has_keys_a_b_and_c
+  def test_it_has_the_keys_a_b_and_c
     shift    = Shift.new
     expected = (shift.key[1] + shift.key[2]).to_i
     actual   = shift.b_key
@@ -47,10 +53,10 @@ class ShiftTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_it_reformats_date_to_DDMMYY_if_date_given
-    shift    = Shift.new("041818")
+  def test_it_knows_date_if_date_is_given
+    shift    = Shift.new("11111","051118")
     actual   = shift.date
-    expected = "041818"
+    expected = "051118"
     assert_equal expected, actual
   end
 
@@ -76,12 +82,12 @@ class ShiftTest < Minitest::Test
   end
 
   def test_it_has_offset_a
-    shift    = Shift.new
+    shift = Shift.new
     assert_equal 9, shift.offset_a
   end
 
   def test_it_has_offsets_b_c_d
-    shift    = Shift.new
+    shift = Shift.new
     assert_equal 9, shift.offset_b
     assert_equal 2, shift.offset_c
     assert_equal 4, shift.offset_d

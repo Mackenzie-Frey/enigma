@@ -6,8 +6,8 @@ class Shift
   attr_reader :key,
               :date
 
-  def initialize(date = Date.today.strftime('%d%m%y'))
-    @key = SecureRandom.random_number(99999).to_s.rjust(5, "0")
+  def initialize(key = SecureRandom.random_number(99999).to_s.rjust(5, "0"), date = Date.today.strftime('%d%m%y'))
+    @key = key
     @date = date
   end
 
