@@ -1,6 +1,13 @@
 require 'date'
 
 class Offset
+
+  attr_reader :date
+
+  def initialize(date = Date.today.strftime('%d%m%y'))
+    @date = date
+  end
+
 end
 
 # require ‘./lib/key_generator.rb’
@@ -17,4 +24,3 @@ end
 # B offset: The second digit (0)
 # C offset: The third digit (2)
 # D offset: The fourth digit (5)
-
