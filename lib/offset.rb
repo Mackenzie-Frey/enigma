@@ -15,9 +15,7 @@ end
 # B key
 # C key
 # D key
-# 			Account for: leading zeros
-# 			Supply Date.today if no date is given
-# Format -> DDMMYY
+
 # Square the numeric form (1672401025)
 # Take the last four digits (1025)
 # A offset: The first digit (1)
