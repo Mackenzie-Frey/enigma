@@ -29,7 +29,7 @@ class KeyGeneratorTest < Minitest::Test
   def test_it_has_key_A
     key = KeyGenerator.new
     key.create_key
-    assert_instance_of Integer, KeyGenerator.key_a
-    assert_equal 2, key_a.length
+    assert_instance_of Integer, key.a
+    assert_equal 2, key.a.length
   end
 end
