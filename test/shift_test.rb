@@ -48,7 +48,7 @@ class ShiftTest < Minitest::Test
   end
 
   def test_it_reformats_date_to_DDMMYY_if_date_given
-    shift    = Shift.new
+    shift    = Shift.new("041818")
     actual   = shift.date
     expected = "041818"
     assert_equal expected, actual
