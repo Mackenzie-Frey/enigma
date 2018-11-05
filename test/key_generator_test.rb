@@ -25,4 +25,11 @@ class KeyGeneratorTest < Minitest::Test
     assert new_key_1 != new_key_2
     assert new_key_2 != new_key_3
   end
+
+  def test_it_has_key_A
+    key = KeyGenerator.new
+    key.create_key
+    assert_instance_of Integer, KeyGenerator.key_a
+    assert_equal 2, key_a.length
+  end
 end
