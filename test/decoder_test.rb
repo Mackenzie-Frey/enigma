@@ -20,4 +20,9 @@ class DecoderTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_it_decodes_one_letter
+    decoder  = Decoder.new("a")
+    assert_equal "c", decoder.decode([2])
+  end
+
 end
