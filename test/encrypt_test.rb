@@ -34,6 +34,13 @@ class EncryptTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_it_rotates_alphabet_for_first_element
+    encrypt  = Encrypt.new("Hello wOrld")
+    actual   = encrypt.rotate_alphabet
+    expected =
+    assert_equal expected, actual
+  end
+
 
   def test_characters_not_in_alphabet_persist
 skip
@@ -42,7 +49,4 @@ skip
     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
     assert_equal expected, actual
   end
-
-  #Enumerator#with_index
-
 end
