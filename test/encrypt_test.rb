@@ -22,22 +22,22 @@ class EncryptTest < Minitest::Test
 
   def test_it_encrypts_one_letter
     encrypt  = Encrypt.new("a")
-    assert_equal "c", encrypt.encode(2)
+    assert_equal "c", encrypt.encode([2])
   end
 
   def test_it_can_encrypt_word
     encrypt  = Encrypt.new("ab")
-    assert_equal "cd", encrypt.encode(2)
+    assert_equal "cd", encrypt.encode([2])
   end
 
   def test_it_can_encrypt_phrase
     encrypt  = Encrypt.new("ab ab")
-    assert_equal "cdbcd", encrypt.encode(2)
+    assert_equal "cdbcd", encrypt.encode([2])
   end
 
   def test_special_characters_persist
     encrypt  = Encrypt.new("!% a")
-    actual   = encrypt.encode(2)
+    actual   = encrypt.encode([2])
     expected = "!%bc"
     assert_equal expected, actual
   end
