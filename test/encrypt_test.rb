@@ -25,6 +25,11 @@ class EncryptTest < Minitest::Test
     assert_equal "c", encrypt.encode(2)
   end
 
+  def test_it_can_encrypt_word
+    encrypt  = Encrypt.new("ab")
+    assert_equal "cd", encrypt.encode(2)
+  end
+
 
 #   def test_special_characters_persist
 # skip
