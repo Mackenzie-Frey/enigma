@@ -1,6 +1,3 @@
-require 'securerandom'
-require 'date'
-
 class Shift
 
   attr_reader :key,
@@ -69,7 +66,6 @@ class Shift
   end
 
   def shift_d
-    binding.pry
     d_key + offset_d
   end
 

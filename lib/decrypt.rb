@@ -1,4 +1,3 @@
-
 class Decrypt
 
 end

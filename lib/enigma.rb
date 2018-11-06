@@ -1,16 +1,4 @@
-require 'date'
-require './lib/encrypt'
-require './lib/decrypt'
-require './lib/offset'
-require './lib/key_generator'
-
 class Enigma
-
-  attr_reader :alphabet
-
-  def initialize
-    @alphabet = ("a".."z").to_a << " "
-  end
 
   def encrypt(message, key = key_generator.create_key, date = Date.today.strftime('%d%m%y'))
     encryption_hash = Hash.new
