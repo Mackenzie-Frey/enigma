@@ -1,13 +1,19 @@
 class Encrypt
 
-  attr_reader :alphabet
+  attr_reader :alphabet,
+              :message
 
-  def initialize
+  def initialize(message)
+    @message = message
     @alphabet = ("a".."z").to_a << " "
   end
 
   def separate(message)
     message.downcase.split("")
+  end
+
+  def alpha_index
+
   end
 
 
