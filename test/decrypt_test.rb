@@ -3,7 +3,7 @@ require './test/test_helper'
 class DecryptTest < Minitest::Test
 
   def test_it_exists
-    decrypt = Decrypt.new(message)
+    decrypt = Decrypt.new('keder ohulw')
     assert_instance_of Decrypt, decrypt
   end
 end

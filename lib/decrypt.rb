@@ -1,5 +1,8 @@
 class Decrypt
 
-end
+  # attr_reader :encrypted_message
 
-# Take file from encrypt  and pass to enigma
+  def initialize(encrypted_message)
+  end
+
+end
