@@ -35,4 +35,11 @@ class DecoderTest < Minitest::Test
     assert_equal "cdbcd", decoder.decode([2])
   end
 
+  def test_special_characters_persist
+    decoder  = Decoder.new("!% a")
+    actual   = decoder.decode([2])
+    expected = "!%bc"
+    assert_equal expected, actual
+  end
+
 end
