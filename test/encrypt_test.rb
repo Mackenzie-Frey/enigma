@@ -34,23 +34,31 @@ class EncryptTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_it_rotates_alphabet_and_outputs_four_arrays
-    encrypt  = Encrypt.new("Hello wOrld")
+  def test_it_encrypts_one_letter
+    message = "a"
+    encrypt  = Encrypt.new(message)
     shift    = Shift.new
 
-    shift_array = shift.shift_amounts
-    encrypt.rotate_alphabet(shift_array)
+    assert_equal "c", encrypt.rotate_alphabet(message, 2)
 
-    actual   = encrypt.rotate_alphabet(shift_array)
-    assert_instance_of Array, actual
-
-    actual   = encrypt.rotate_alphabet(shift_array).count
-    assert_equal 4, actual
-
-    actual   = encrypt.rotate_alphabet(shift_array)[0].count
-    assert_equal 27, actual
+    # actual   = encrypt.rotate_alphabet(shift_array)
+    # assert_instance_of Array, actual
+    #
+    # actual   = encrypt.rotate_alphabet(shift_array).count
+    # assert_equal 4, actual
+    #
+    # actual   = encrypt.rotate_alphabet(shift_array)[0].count
+    # assert_equal 27, actual
   end
 
+  def test_it_can_rotate_one_letter
+
+
+  end
+
+# set each array to a variable
+# do if statements for matching the index to the string to the index of the alphabet
+# do if statements, name
 
   def test_characters_not_in_alphabet_persist
 skip
