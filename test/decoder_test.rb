@@ -25,4 +25,9 @@ class DecoderTest < Minitest::Test
     assert_equal "c", decoder.decode([2])
   end
 
+  def test_it_can_encoder_word
+    decoder = Decoder.new("ab")
+    assert_equal "cd", decoder.decode([2])
+  end
+
 end
