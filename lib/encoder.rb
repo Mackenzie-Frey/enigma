@@ -1,4 +1,4 @@
-class Encrypt
+class Encoder
 
   attr_reader :alphabet,
               :message

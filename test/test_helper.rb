@@ -7,8 +7,8 @@ require 'minitest/pride'
 require 'securerandom'
 require 'date'
 
-require './lib/encrypt'
-require './lib/decrypt'
+require './lib/encoder'
+require './lib/decoder'
 require './lib/shift'
 require './lib/enigma'
 
