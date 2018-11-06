@@ -2,10 +2,6 @@ class Enigma
 
   attr_reader :alphabet
 
-  def initialize
-    @alphabet = ("a".."z").to_a << " "
-  end
-
   def encrypt(message, key = key_generator.create_key, date = Date.today.strftime('%d%m%y'))
     encryption_hash = Hash.new
     encryption = some_method_to_encrypt_it(message)
