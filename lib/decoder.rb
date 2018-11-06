@@ -16,7 +16,7 @@ class Decoder
     separate_encrypted_message.map.with_index do |letter, index_in_string|
       index_num = @alphabet.index(letter)
       shift_index = index_in_string % shift.length
-      rotated_alphabet =  @alphabet.rotate(shift[shift_index])
+      rotated_alphabet =  @alphabet.rotate(-shift[shift_index])
       if index_num == nil
         encrypted_characters << letter
       else
