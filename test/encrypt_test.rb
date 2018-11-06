@@ -41,4 +41,11 @@ class EncryptTest < Minitest::Test
     expected = "!%bc"
     assert_equal expected, actual
   end
+
+  def test_it_takes_shifts_as_an_array
+    encrypt  = Encrypt.new("Hello World")
+    actual   = encrypt.encode([3, 27, 73, 20])
+    expected = 'keder ohulw'
+    assert_equal expected, actual
+  end
 end
