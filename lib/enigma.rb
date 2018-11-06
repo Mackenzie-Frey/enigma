@@ -1,9 +1,3 @@
-require 'date'
-require './lib/encrypt'
-require './lib/decrypt'
-require './lib/offset'
-require './lib/key_generator'
-
 class Enigma
 
   attr_reader :alphabet
