@@ -6,6 +6,10 @@ class Encrypt
     @alphabet = ("a".."z").to_a << " "
   end
 
+  def separate(message)
+    message.downcase.split("")
+  end
+
 
 end
 
