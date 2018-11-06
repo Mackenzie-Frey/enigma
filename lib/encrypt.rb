@@ -15,18 +15,17 @@ class Encrypt
 
   def encode(shift)
     encrypted_characters = []
-    separate_message.map do |letter|
-
+    separate_message.map.with_index do |letter, index_in_string|
       index_num = @alphabet.index(letter)
-      rotated_alphabet =  @alphabet.rotate(shift)
-
+      shift_index = index_in_string % shift.length
+      rotated_alphabet =  @alphabet.rotate(shift[shift_index])
       if index_num == nil
         encrypted_characters << letter
       else
         encrypted_characters << rotated_alphabet[index_num]
       end
-
     end
     encrypted_characters.join
   end
+
 end
