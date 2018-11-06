@@ -8,17 +8,17 @@ class Encrypt
     @alphabet = ("a".."z").to_a << " "
   end
 
-  def separate(message)
-    message.downcase.split("")
+  def separate_message
+    @message.downcase.split("")
   end
 
   def alpha_index
-
+    separate_message.map do |letter|
+      @alphabet.index(letter)
+    end
   end
 
-
 end
-
 
 
 # Take in file, parse and give to encrypt
