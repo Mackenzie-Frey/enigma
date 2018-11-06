@@ -6,7 +6,6 @@ class Encrypt
   def initialize(message)
     @message = message
     @alphabet = ("a".."z").to_a << " "
-    @encrypted_characters = []
   end
 
   def separate_message
@@ -15,6 +14,7 @@ class Encrypt
 
 
   def encode(shift)
+    @encrypted_characters = []
     separate_message.map do |letter|
 
       index_num = @alphabet.index(letter)
@@ -25,6 +25,7 @@ class Encrypt
       else
         @encrypted_characters << rotated_alphabet[index_num]
       end
+
     end
     @encrypted_characters.join
   end
