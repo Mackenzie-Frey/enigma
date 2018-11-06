@@ -15,14 +15,14 @@ class EncryptTest < Minitest::Test
 
   def test_it_splits_into_an_array
     encrypt  = Encrypt.new("hello world")
-    actual   = encrypt.separate
+    actual   = encrypt.separate_message
     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
     assert_equal expected, actual
   end
 
   def test_it_can_downcase
     encrypt  = Encrypt.new("Hello wOrld")
-    actual   = encrypt.separate
+    actual   = encrypt.separate_message
     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
     assert_equal expected, actual
   end
@@ -38,7 +38,7 @@ class EncryptTest < Minitest::Test
   def test_characters_not_in_alphabet_persist
 skip
     encrypt  = Encrypt.new("Hello wOrld!%()")
-    actual   = encrypt.separate
+    actual   = encrypt.separate_message
     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
     assert_equal expected, actual
   end
