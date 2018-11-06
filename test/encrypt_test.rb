@@ -34,11 +34,21 @@ class EncryptTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_it_rotates_alphabet_for_first_element
+  def test_it_rotates_alphabet_and_outputs_four_arrays
     encrypt  = Encrypt.new("Hello wOrld")
-    actual   = encrypt.rotate_alphabet
-    expected =
-    assert_equal expected, actual
+    shift    = Shift.new
+
+    shift_array = shift.shift_amounts
+    encrypt.rotate_alphabet(shift_array)
+
+    actual   = encrypt.rotate_alphabet(shift_array)
+    assert_instance_of Array, actual
+
+    actual   = encrypt.rotate_alphabet(shift_array).count
+    assert_equal 4, actual
+
+    actual   = encrypt.rotate_alphabet(shift_array)[0].count
+    assert_equal 27, actual
   end
 
 
