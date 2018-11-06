@@ -42,4 +42,11 @@ class DecoderTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_it_takes_shifts_as_an_array
+    decoder  = Decoder.new("Hello World")
+    actual   = decoder.decode([3, 27, 73, 20])
+    expected = 'keder ohulw'
+    assert_equal expected, actual
+  end
+
 end
