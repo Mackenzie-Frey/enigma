@@ -13,58 +13,24 @@ class EncryptTest < Minitest::Test
     assert_equal expected, encrypt.alphabet
   end
 
-  def test_it_splits_into_an_array
-    encrypt  = Encrypt.new("hello world")
-    actual   = encrypt.separate_message
-    expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
-    assert_equal expected, actual
-  end
-
-  def test_it_can_downcase
+  def test_it_can_separate_message_and_downcase
     encrypt  = Encrypt.new("Hello wOrld")
     actual   = encrypt.separate_message
     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
-    assert_equal expected, actual
-  end
-
-  def test_it_knows_message_character_index_in_alpha
-    encrypt  = Encrypt.new("Hello wOrld")
-    actual   = encrypt.alpha_index
-    expected = [7, 4, 11, 11, 14, 26, 22, 14, 17, 11, 3]
     assert_equal expected, actual
   end
 
   def test_it_encrypts_one_letter
-    message = "a"
-    encrypt  = Encrypt.new(message)
-    shift    = Shift.new
-
-    assert_equal "c", encrypt.rotate_alphabet(message, 2)
-
-    # actual   = encrypt.rotate_alphabet(shift_array)
-    # assert_instance_of Array, actual
-    #
-    # actual   = encrypt.rotate_alphabet(shift_array).count
-    # assert_equal 4, actual
-    #
-    # actual   = encrypt.rotate_alphabet(shift_array)[0].count
-    # assert_equal 27, actual
+    encrypt  = Encrypt.new("a")
+    assert_equal "c", encrypt.encode(2)
   end
 
-  def test_it_can_rotate_one_letter
 
-
-  end
-
-# set each array to a variable
-# do if statements for matching the index to the string to the index of the alphabet
-# do if statements, name
-
-  def test_characters_not_in_alphabet_persist
-skip
-    encrypt  = Encrypt.new("Hello wOrld!%()")
-    actual   = encrypt.separate_message
-    expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
-    assert_equal expected, actual
-  end
+#   def test_special_characters_persist
+# skip
+#     encrypt  = Encrypt.new("Hello wOrld!%()")
+#     actual   = encrypt.separate_message
+#     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
+#     assert_equal expected, actual
+#   end
 end
