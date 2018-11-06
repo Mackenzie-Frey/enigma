@@ -32,15 +32,13 @@ class EncryptTest < Minitest::Test
 
   def test_it_can_encrypt_phrase
     encrypt  = Encrypt.new("ab ab")
-    assert_equal "cd cd", encrypt.encode(2)
+    assert_equal "cdbcd", encrypt.encode(2)
   end
 
-
-#   def test_special_characters_persist
-# skip
-#     encrypt  = Encrypt.new("Hello wOrld!%()")
-#     actual   = encrypt.separate_message
-#     expected = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
-#     assert_equal expected, actual
-#   end
+  def test_special_characters_persist
+    encrypt  = Encrypt.new("!% a")
+    actual   = encrypt.encode(2)
+    expected = "!%bc"
+    assert_equal expected, actual
+  end
 end
