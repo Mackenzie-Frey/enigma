@@ -12,7 +12,5 @@ class EncryptTest < Minitest::Test
     expected = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
     assert_equal expected, encrypt.alphabet
   end
-
+  
 end
-
-#@alphabet = ("a".."z").to_a << " "
