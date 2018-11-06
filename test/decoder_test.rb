@@ -13,4 +13,11 @@ class DecoderTest < Minitest::Test
     assert_equal expected, decoder.alphabet
   end
 
+  def test_it_can_separate_message_and_downcase
+    decoder  = Decoder.new('keder ohulw')
+    actual   = decoder.separate_message
+    expected = ["k", "e", "d", "e", "r", " ", "o", "h", "u", "l", "w"]
+    assert_equal expected, actual
+  end
+
 end
