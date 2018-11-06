@@ -14,19 +14,19 @@ class Encrypt
 
 
   def encode(shift)
-    @encrypted_characters = []
+    encrypted_characters = []
     separate_message.map do |letter|
 
       index_num = @alphabet.index(letter)
       rotated_alphabet =  @alphabet.rotate(shift)
 
       if index_num == nil
-        letter
+        encrypted_characters << letter
       else
-        @encrypted_characters << rotated_alphabet[index_num]
+        encrypted_characters << rotated_alphabet[index_num]
       end
 
     end
-    @encrypted_characters.join
+    encrypted_characters.join
   end
 end
