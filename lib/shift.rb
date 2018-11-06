@@ -66,7 +66,6 @@ class Shift
   end
 
   def shift_d
-    binding.pry
     d_key + offset_d
   end
 
