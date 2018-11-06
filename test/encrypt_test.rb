@@ -30,7 +30,7 @@ class EncryptTest < Minitest::Test
   def test_it_knows_message_character_index_in_alpha
     encrypt  = Encrypt.new("Hello wOrld")
     actual   = encrypt.alpha_index
-    expected = 7
+    expected = [7, 4, 11, 11, 14, 26, 22, 14, 17, 11, 3]
     assert_equal expected, actual
   end
 
