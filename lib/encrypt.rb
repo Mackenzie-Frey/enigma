@@ -15,8 +15,3 @@ encrypted_file.write(encrypted_message)
 encrypted_file.close
 
 puts "Created #{encrypted_file_name} with the key #{encrypted_hash[:key]} date #{encrypted_hash[:date]} "
-
-# require 'pry';binding.pry
-
-
-#store as hash and print to screen

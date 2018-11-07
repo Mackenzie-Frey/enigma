@@ -20,17 +20,17 @@ class EncoderTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_it_encoders_one_letter
+  def test_it_encodes_one_letter
     encoder  = Encoder.new("a")
     assert_equal "c", encoder.encode([2])
   end
 
-  def test_it_can_encoder_word
+  def test_it_can_encode_word
     encoder  = Encoder.new("ab")
     assert_equal "cd", encoder.encode([2])
   end
 
-  def test_it_can_encoder_phrase
+  def test_it_can_encode_phrase
     encoder  = Encoder.new("ab ab")
     assert_equal "cdbcd", encoder.encode([2])
   end

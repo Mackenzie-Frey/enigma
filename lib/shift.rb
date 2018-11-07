@@ -1,3 +1,6 @@
+require 'securerandom'
+require 'date'
+
 class Shift
 
   attr_reader :key,

@@ -61,6 +61,7 @@ class ShiftTest < Minitest::Test
 
   def test_it_reformats_date_to_DDMMYY_if_no_date_given
     shift    = Shift.new
+    shift.expects(:date).returns("051118")
     actual   = shift.date
     expected = "051118"
     assert_equal expected, actual
@@ -68,6 +69,7 @@ class ShiftTest < Minitest::Test
 
   def test_it_can_square_the_date
     shift    = Shift.new
+    shift.expects(:date_squared).returns(2613049924)
     actual   = shift.date_squared
     expected = 2613049924
     assert_equal expected, actual
