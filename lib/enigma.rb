@@ -10,7 +10,14 @@ class Enigma
     encryption_hash
   end
 
-  def decrypt
+  def decrypt(message, key = key_generator.create_key, date = Date.today.strftime('%d%m%y'))
+    decryption_hash = Hash.new
+    decryption = Decoder.new(message)
+    shift = Shift.new(key, date).shift_amounts
+    decryption_hash[:decryption] = decryption.decode(shift)
+    decryption_hash[:key] = key
+    decryption_hash[:date] = date
+    decryption_hash
   end
 
 
