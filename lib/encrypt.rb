@@ -1,5 +1,4 @@
-
-require 'pry';binding.pry
+require './lib/enigma'
 
 
 
@@ -8,8 +7,9 @@ message_string = message_file.read
 
 enigma = Enigma.new
 
-enigma.encrypt(message_string)
+something = enigma.encrypt(message_string)
 
+require 'pry';binding.pry
 
 #write enigma tests
 # save to hash

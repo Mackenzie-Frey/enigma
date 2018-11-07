@@ -1,6 +1,15 @@
+require 'securerandom'
+require 'date'
+require './lib/encoder'
+require './lib/shift'
+
 class Enigma
 
-  def encrypt(message, key = key_generator.create_key, date = Date.today.strftime('%d%m%y'))
+  def create_key
+    SecureRandom.random_number(99999).to_s.rjust(5, "0")
+  end
+
+  def encrypt(message, key = create_key, date = Date.today.strftime('%d%m%y'))
     encryption_hash = Hash.new
     encryption = Encoder.new(message)
     shift = Shift.new(key, date).shift_amounts
@@ -10,7 +19,7 @@ class Enigma
     encryption_hash
   end
 
-  def decrypt(message, key = key_generator.create_key, date = Date.today.strftime('%d%m%y'))
+  def decrypt(message, key = create_key, date = Date.today.strftime('%d%m%y'))
     decryption_hash = Hash.new
     decryption = Decoder.new(message)
     shift = Shift.new(key, date).shift_amounts

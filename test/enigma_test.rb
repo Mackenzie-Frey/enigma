@@ -20,8 +20,4 @@ class EngimaTest < Minitest::Test
     expected = {decryption: "hello world", key: "02715", date: "040895"}
     assert_equal expected, actual
   end
-  
 end
-
-# date = date.parse(11-01-2018)
-# .tr string method to translate
