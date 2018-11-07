@@ -12,21 +12,15 @@ class EngimaTest < Minitest::Test
     actual = enigma.encrypt("hello world", "02715", "040895")
     expected = {encryption: "keder ohulw", key: "02715", date: "040895"}
     assert_equal expected, actual
-
-    #actual = enigma.encrypt("hello world").key
-    # assert_instance_of String, actual
-    # assert_equal 0, actual
-
-    # expected = {encryption: "keder ohulw", key: "02715", date: "040895"}
-    # assert_equal expected, actual
   end
 
   def test_it_can_decrypt
-skip
     enigma = Enigma.new
-    input = 'kfdsjhds'
-    assert_equal 'dsfkjhdskfj', enigma.decrypt
+    actual = enigma.decrypt("keder ohulw", "02715", "040895")
+    expected = {decryption: "hello world", key: "02715", date: "040895"}
+    assert_equal expected, actual
   end
+  
 end
 
 # date = date.parse(11-01-2018)
