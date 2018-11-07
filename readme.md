@@ -20,5 +20,5 @@
 
 ### __Version Control:__
 #### *3: Meets Expectations*
-* > 120 commits
-* > 20  pull requests
+* 120+ commits
+* 20+  pull requests
