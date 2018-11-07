@@ -11,5 +11,3 @@ require './lib/encoder'
 require './lib/decoder'
 require './lib/shift'
 require './lib/enigma'
-
-require 'pry'
