@@ -7,11 +7,6 @@ message_string = message_file.read
 
 enigma = Enigma.new
 
-something = enigma.encrypt(message_string)
+encrypted_hash = enigma.encrypt(message_string)
 
 require 'pry';binding.pry
-
-#write enigma tests
-# save to hash
-# make file
-# print out
